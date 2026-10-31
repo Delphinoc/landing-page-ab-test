@@ -1,0 +1,115 @@
+{
+  "data": {
+    "raw_rows": 294478,
+    "raw_distinct_users": 290584,
+    "mismatch_rows": 3893,
+    "mismatch_share_pct": 1.32,
+    "mismatch_by_cell": [
+      {
+        "assigned_group": "control",
+        "landing_page": "new_page",
+        "n_rows": 1928,
+        "n_users": 1928
+      },
+      {
+        "assigned_group": "treatment",
+        "landing_page": "old_page",
+        "n_rows": 1965,
+        "n_users": 1965
+      }
+    ],
+    "clean_users": 290584,
+    "test_window": [
+      "2017-01-02 00:00:00",
+      "2017-01-24 00:00:00"
+    ],
+    "test_days_calendar": 23
+  },
+  "health": {
+    "users_control": 145274,
+    "users_treatment": 145310,
+    "control_share_pct": 49.994,
+    "srm_p_value": 0.9468
+  },
+  "primary": {
+    "control_cr_pct": 12.039,
+    "treatment_cr_pct": 11.881,
+    "diff_pp": -0.158,
+    "relative_lift_pct": -1.31,
+    "ci95_pp": [
+      -0.394,
+      0.078
+    ],
+    "z": -1.311,
+    "p_value": 0.1899
+  },
+  "power": {
+    "practical_mde_pp": 0.5,
+    "n_needed_per_arm": 67679,
+    "n_actual_per_arm_min": 145274,
+    "mde_achieved_pp": 0.338
+  },
+  "novelty": {
+    "by_period": [
+      {
+        "period": "first_half",
+        "diff_pp": -0.018,
+        "p_value": 0.9156
+      },
+      {
+        "period": "second_half",
+        "diff_pp": -0.283,
+        "p_value": 0.0888
+      }
+    ],
+    "split_date": "2017-01-13 00:00:00",
+    "interaction_p_value": 0.2743
+  },
+  "peeking": {
+    "days_checked": 23,
+    "days_with_p_below_alpha": 0,
+    "min_daily_p_value": 0.1269
+  },
+  "segments": {
+    "by_country": [
+      {
+        "country": "CA",
+        "users": 14499,
+        "control_cr_pct": 11.878,
+        "treatment_cr_pct": 11.19,
+        "diff_pp": -0.688,
+        "ci_low_pp": -1.728,
+        "ci_high_pp": 0.352,
+        "p_value": 0.1947,
+        "p_holm": 0.3968
+      },
+      {
+        "country": "UK",
+        "users": 72466,
+        "control_cr_pct": 12.002,
+        "treatment_cr_pct": 12.117,
+        "diff_pp": 0.115,
+        "ci_low_pp": -0.359,
+        "ci_high_pp": 0.589,
+        "p_value": 0.6349,
+        "p_holm": 0.6349
+      },
+      {
+        "country": "US",
+        "users": 203619,
+        "control_cr_pct": 12.063,
+        "treatment_cr_pct": 11.847,
+        "diff_pp": -0.216,
+        "ci_low_pp": -0.498,
+        "ci_high_pp": 0.065,
+        "p_value": 0.1323,
+        "p_holm": 0.3968
+      }
+    ],
+    "interaction_p_values": {
+      "treatment:C(country, Treatment('US'))[T.CA]": 0.3833,
+      "treatment:C(country, Treatment('US'))[T.UK]": 0.2377
+    }
+  },
+  "decision": "DO NOT LAUNCH: keep old page (test was adequately powered; the target lift is ruled out)"
+}
