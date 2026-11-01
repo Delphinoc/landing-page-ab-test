@@ -8,6 +8,10 @@ This folder reruns the same cleaning and metrics pipeline in **Google BigQuery**
 | `02_metrics.sql` | Arm, daily, cumulative and country metrics, plus the primary two-proportion z-test in SQL |
 | `check_parity.py` | Compares the BigQuery output with `reports/results.json` from the DuckDB run |
 
+## Result
+
+Run in the BigQuery sandbox (asia-southeast1). [`bq_primary_result.json`](bq_primary_result.json) is the exported BigQuery output, and [`parity_check_output.txt`](parity_check_output.txt) shows all 7 metrics matching the DuckDB results: diff −0.158 pp, 95% CI −0.394 to +0.078 pp, z −1.311, p 0.19.
+
 ## Run it in the free BigQuery sandbox (no billing needed)
 
 1. Go to the BigQuery console, sign in with a Google account, and accept the sandbox prompt. Create a project, e.g. `ab-test-portfolio`.

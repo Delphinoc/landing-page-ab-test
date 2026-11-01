@@ -1,0 +1,9 @@
+OK   control_cr_pct     BigQuery=12.039     DuckDB=12.039
+OK   treatment_cr_pct   BigQuery=11.881     DuckDB=11.881
+OK   diff_pp            BigQuery=-0.158     DuckDB=-0.158
+OK   ci_low_pp          BigQuery=-0.394     DuckDB=-0.394
+OK   ci_high_pp         BigQuery=0.078      DuckDB=0.078
+OK   z                  BigQuery=-1.311     DuckDB=-1.311
+OK   p_value            BigQuery=0.1899     DuckDB=0.1899
+
+Parity confirmed.
