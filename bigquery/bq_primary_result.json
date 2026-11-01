@@ -1,0 +1,11 @@
+[{
+  "n_c": "145274",
+  "n_t": "145310",
+  "control_share_pct": "49.994",
+  "control_cr_pct": "12.039",
+  "treatment_cr_pct": "11.881",
+  "diff_pp": "-0.158",
+  "ci_low_pp": "-0.394",
+  "ci_high_pp": "0.078",
+  "z": "-1.311"
+}]
