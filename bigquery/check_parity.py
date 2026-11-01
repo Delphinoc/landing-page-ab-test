@@ -23,7 +23,11 @@ def two_sided_p(z: float) -> float:
 
 
 def main() -> int:
-    bq = json.loads(BQ.read_text())
+    text = BQ.read_text().strip()
+    try:
+        bq = json.loads(text)
+    except json.JSONDecodeError:  # newline-delimited JSON export
+        bq = json.loads(text.splitlines()[0])
     bq = bq[0] if isinstance(bq, list) else bq
     ref = json.loads(REF.read_text())["primary"]
     z = float(bq["z"])
