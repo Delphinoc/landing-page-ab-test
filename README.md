@@ -87,5 +87,9 @@ python src/run_analysis.py   # writes reports/results.json and reports/figures/
 pytest -q                    # 13 tests
 ```
 
+## BigQuery version
+
+[`bigquery/`](bigquery/) reruns the same cleaning and metrics pipeline in Google BigQuery (GoogleSQL: `QUALIFY`, explicit schema load, the z-test computed in SQL). [`check_parity.py`](bigquery/check_parity.py) confirms that the BigQuery output matches the DuckDB results. To run it in the free BigQuery sandbox, follow [`bigquery/README.md`](bigquery/README.md).
+
 ## Data source
 `ab_data.csv` and `countries.csv` are the simulated e-commerce A/B test data from Udacity's Data Analyst Nanodegree ("Analyze A/B Test Results"), as published in public GitHub repositories. They are used here for learning and portfolio purposes only.
